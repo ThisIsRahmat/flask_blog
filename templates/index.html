@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+    {% for jobs in jobs %}
+        <a href="#">
+            <h2>{{ jobs['title'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ jobs['created'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}
